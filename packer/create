@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+if [ "$1" == "centos7" ]; then
+   vmstring="templates/centos-7.json"
+   boxpath="boxes/centos-7.box"
+fi 
+
+echo $vmstring
+
+rm -rf $boxpath || true
+packer build -only virtualbox-iso $vmstring
+
