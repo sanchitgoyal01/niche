@@ -1,0 +1,16 @@
+---
+
+- hosts: php
+  sudo: yes
+  roles:
+    - { role: common, tags: common }
+    - { role: apache, tags: apache }
+    - { role: php-apache, tags: php-apache }
+
+# - hosts: mysql
+#   sudo: yes
+#   roles:
+#     - { role: common }
+#     - { role: mysql }
+
+

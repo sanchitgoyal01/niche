@@ -9,8 +9,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "file://packer/boxes/centos-7.box"
 
   # Build Virtual Machine
-  config.vm.define "bigdata" do |bigdata|
-    bigdata.vm.network :private_network, ip: "192.168.40.10"
+  config.vm.define "php" do |php|
+    php.vm.network :private_network, ip: "192.168.40.10"
   end
 end
 
